@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ book.btitle }}</title>
+</head>
+<body>
+<h3>书籍名称:{{ book.btitle }}</h3>
+<ul>
+    {% for hero in heros %}
+    <li>{{ hero.hname }}--{{ hero.hcontent }}</li>
+    {% empty %}
+        <h2>当前书籍当中尚未添加英雄</h2>
+    {% endfor %}
+</ul>
+</body>
+</html>

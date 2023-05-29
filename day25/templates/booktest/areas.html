@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>地区大全</title>
+</head>
+<body>
+<h1>当前地区:{{ area.atitle }}</h1>
+<h2>当前父地址:{{ aparent.atitle }}</h2>
+<h2>当前子地址:</h2>
+    {% for i in area_list %}
+        <li>{{ i.atitle }}</li>
+    {% endfor %}
+</body>
+</html>

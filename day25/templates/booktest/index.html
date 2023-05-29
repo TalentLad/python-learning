@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标题</title>
+</head>
+<body>
+    <h1>初始文件:</h1>
+    {{context}}
+    <h1>使用safe标签关闭转义:</h1>
+    {{context|safe}}
+    <h1>使用autoescape标签关闭转义:</h1>
+    {% autoescape off %}
+    {{context}}
+    {% endautoescape %}
+
+</body>
+</html>

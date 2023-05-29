@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load filters %}
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器</title>
+</head>
+<body>
+{% comment %}
+    {% for book in books %}
+        {% if book.id|mod:2 %}
+        <li>{{ book.id }} -- {{ book.btitle|length }}{{ book.btitle }} -- {{ book.bpub_date|date:'Y年m月d日' }}</li>
+        {% else %}
+        <li>{{ book.id }} -- {{ book.btitle|length }}{{ book.btitle }} -- {{ book.bpub_date}}</li>
+        {% endif %}
+    {% endfor %}
+    {% endcomment %}
+</body>
+</html>
